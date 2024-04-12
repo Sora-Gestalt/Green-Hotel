@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Hotel</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'welcome.css' %}" type="text/css"> <!-- Link to external CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{% static '../../../static/img/6' %}">
+</head>
+<body>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+        <!-- Images for the slideshow -->
+        <img class="slide" src="{% static '../../../static/img/1.jpg' %}" alt="Image 1">
+        <img class="slide" src="{% static '../../../static/img/2.jpg' %}" alt="Image 2">
+        <img class="slide" src="{% static '../../../static/img/3.jpg' %}" alt="Image 3">
+        <img class="slide" src="{% static '../../../static/img/4.jpg' %}" alt="Image 4">
+        <img class="slide" src="{% static '../../../static/img/5.jpg' %}" alt="Image 5">
+        <!-- Add more images as needed -->
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <h1>Welcome to</h1>
+        <h1>Green Hotel</h1>
+        <h2>Start Your Reservation Now!</h2>
+        <br>
+        <h3>Use Our Chatbot To Reserve</h3>
+    </div>
+
+    <!-- About Me section -->
+    <div class="about-container">
+        <h2>About Green Hotel</h2>
+        <p>Welcome to Green Hotel!</p>
+        <p>At Green Hotel, we pride ourselves on providing a unique and eco-friendly hospitality experience for our guests. Nestled in the heart of nature, our hotel offers a tranquil retreat from the hustle and bustle of city life.</p>
+        <p>Our commitment to sustainability is reflected in every aspect of our operations. From energy-efficient practices to locally-sourced organic ingredients in our cuisine, we strive to minimize our environmental footprint while delivering exceptional service to our guests.</p>
+        <p>Whether you're here for a relaxing getaway, a corporate retreat, or a special event, our dedicated team is here to ensure that your stay with us is memorable and enjoyable.</p>
+        <p>Experience the beauty of nature and the warmth of hospitality at Green Hotel. We look forward to welcoming you soon!</p>
+    </div>
+
+    <!-- JavaScript for slideshow -->
+    <script>
+        var slideIndex = 0;
+        var slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach(function(slide) {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            showSlide(slideIndex);
+        }
+
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
+    <!-- Third-party JavaScript (if any) -->
+    <script src="//code.tidio.co/2gidosnhfmq8izlt28uwmxmxdqmz9twv.js" async></script>
+
+</body>
+</html>
